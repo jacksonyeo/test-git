@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <title>This is the title of the webpage!</title>
@@ -8,14 +8,13 @@
     <script src="lunar2024.js"></script>
     <h1>
         <script charset="utf-8">
-            //abc = lunar2024.go(a.getMonth(), a.getDay());
-           // document.write(abc);
+            let weekday = ['日', '一', '二', '三', '四', '五', '六'];
             let a;
             let time;
             setInterval(() => {
                 a = new Date();
                 let datestr = a.toLocaleDateString();
-                time = lunar2024.go(a.getMonth() + 1, a.getDate()) + "<br>" + a.getDay() + " " + datestr + '  ' + a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+                time = lunar2024.go(a.getMonth() + 1, a.getDate()) + "<br>星期" + weekday[a.getDay()] + "<br>" + datestr + '  ' + a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
                 document.getElementById('time').innerHTML = time;
             }, 1000);
         </script>
