@@ -15,7 +15,7 @@
             setInterval(() => {
                 a = new Date();
                 let datestr = a.toLocaleDateString();
-                time = lunar2024.go(a.getMonth()+1, a.getDay()) + "<br>" + a.getDay() + " " + datestr + '  ' + a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+                time = lunar2024.go(a.getMonth() + 1, a.getDate()) + "<br>" + a.getDay() + " " + datestr + '  ' + a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
                 document.getElementById('time').innerHTML = time;
             }, 1000);
         </script>
